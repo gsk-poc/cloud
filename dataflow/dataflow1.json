@@ -1,0 +1,20 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "iris",
+						"type": "DatasetReference"
+					},
+					"name": "irisSource"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "\n\nsource(output(\n\t\tsepal_length as float,\n\t\tsepal_width as float,\n\t\tpetal_length as float,\n\t\tpetal_width as float,\n\t\tspecies as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false) ~> irisSource"
+		}
+	}
+}

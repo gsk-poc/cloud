@@ -1,0 +1,44 @@
+{
+	"name": "iris",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "iris.csv",
+				"fileSystem": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sepal_length",
+				"type": "String"
+			},
+			{
+				"name": "sepal_width",
+				"type": "String"
+			},
+			{
+				"name": "petal_length",
+				"type": "String"
+			},
+			{
+				"name": "petal_width",
+				"type": "String"
+			},
+			{
+				"name": "species",
+				"type": "String"
+			}
+		]
+	}
+}
